@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Motivation Web App</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  <section>
+			<div class="intro">
+				<h1>Motivation quote to help motivate you throughout the day!!!!!</h1>
+				<span>Depending on your "Time Stamp", you will receive a Morning quote to get your day started, an Afternoon Pick-Me Up, an Evening meaningful quote or if your up too late, a funny quote! </span>
+			</div>
+			<div class="clock">
+				<p id="clock">Time Stamp: </p>
+			</div>
+			<div class="quote">
+				<button type="button" name="button" id="generate">Generate Quote!</button>
+				<p class="responseQuote"></p>
+				<p class="luckyNumber"> </p>
+			</div>
+
+      <div class"affirm">
+        <h3>Positive Affirmations!</h3>
+        <ul class="affirm">
+          <% for(var i=0; i<affirm.length; i++) {%>
+            <li class="affirm">
+              <span><%= affirm[i].msg %></span>
+              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+            </li>
+            <% } %>
+          </ul>
+
+          <h2>Enter one thing you Appreciate / Grateful for:</h2>
+
+          <form action="/affirm" method="POST">
+            <input type="text" placeholder="Appreciate/Grateful" name="msg" id="message">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+
+  <script type="text/javascript" src="/main.js"></script>
+
+</body>
+</html>
